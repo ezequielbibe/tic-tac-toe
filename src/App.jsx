@@ -1,10 +1,6 @@
 import { useState } from 'react'
+import { TURNS } from './constants'
 import './App.css'
-
-const TURNS = {
-  x: '❌',
-  o: '🟠',  
-}
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
@@ -18,20 +14,20 @@ function App() {
   }
   const restartGame = () => {
     setBoard(Array(9).fill(null))
-    setTurn
+    setTurn(TURNS.x)
   }
 
   return (
     <div className='App'>
       <header className='header'>
-        <h1>Tic Tac Toe</h1>
-        <span>Turnos de: <strong>{turn}</strong></span>
-        <button onClick={restartGame}>Empezar de nuevo</button>
+        <h1>Ta Te Ti</h1>
+        <strong>TURN: {turn}</strong>
+        <button onClick={restartGame}><strong>RESTART GAME</strong></button>
       </header>
       <section className='table'>
         {board.map((box, index)=> 
-          <div key={index} className='table-box' onClick={()=> handleCheck(index)}>
-            <strong>{box}</strong>
+          <div key={index} className={`table-box ${box === TURNS.x && "turnX-active"} ${box === TURNS.o && "turnO-active"}`} onClick={()=> handleCheck(index)}>
+            <span>{box}</span>
           </div>
         )}
       </section>

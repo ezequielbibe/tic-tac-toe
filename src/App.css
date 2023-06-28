@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Prism&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +10,45 @@
   height: 100%;
   min-height: 100vh;
   background-color: #222;
+  font-size: 30px;
   color: white;
-  font-family: 'Poppins', sans-serif;
-  display: grid;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .header h1 {
+  font-size: 80px;
   text-align: center;
-  text-shadow: 3px 2px 2px rgba(255,255,255,0.6);
+  font-weight: bold;
   color: rgb(255, 201, 100);
+  font-family: 'Tilt Prism', cursive;}
+
+.header button {
+  cursor: pointer;
+  
+  width: 150px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #222;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.header button:hover {
+  background-color: rebeccapurple;
 }
 
 .table {
@@ -35,7 +62,7 @@
 }
 
 .table-box {
-  font-size: 30px;
+  font-size: 50px;
   border: 3px solid rgb(179, 178, 178);
   border-radius: 5px;
   cursor: pointer;
@@ -46,6 +73,23 @@
 
 .table-box:hover {
   box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
--webkit-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
--moz-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+}
+
+.turnX-active {
+  border-color: red;
+  box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+}
+
+.turnO-active {
+  border-color: aqua;
+  box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(189,189,189,0.75);
+}
+.turnX-active:hoverr {
+  box-shadow: none;
 }
